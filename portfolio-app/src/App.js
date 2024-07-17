@@ -2,6 +2,8 @@ import React, { useMemo } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import { clone } from 'three/examples/jsm/utils/SkeletonUtils';
+import Blog from './Blog';
+import './App.css';
 
 // Get model as a copy to allow multiple renders of the same model.
 function Model({ path }) {
@@ -30,6 +32,7 @@ function App() {
           <Model path="/model.glb" />
         </Canvas>
       </div>
+      <Blog/>
     </div>
   );
 }
