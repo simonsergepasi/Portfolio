@@ -5,6 +5,7 @@ import { clone } from 'three/examples/jsm/utils/SkeletonUtils';
 import Blog from './Blog';
 import './App.css';
 import CollapsibleMenu from './CollapsibleMenu';
+import ProfileComponent from './ProfileComponent';
 
 // Get model as a copy to allow multiple renders of the same model.
 function Model({ path }) {
@@ -18,8 +19,9 @@ function App() {
     // Show multiple canvases.
     <div>
       <CollapsibleMenu />
-      {<div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
-        <div style={{ flex: 1 }}>
+      <ProfileComponent/>
+      <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+        {/*<div style={{ flex: 1 }}>
           <Canvas camera={{ position: [0, 0, 2] }}>
             <ambientLight intensity={0.5} />
             <directionalLight position={[2, 2, 2]} />
@@ -34,9 +36,9 @@ function App() {
             <OrbitControls />
             <Model path="/model.glb" />
           </Canvas>
-        </div>
+        </div>*/}
         <Blog/>
-      </div>}
+      </div>
     </div>
   );
 }
