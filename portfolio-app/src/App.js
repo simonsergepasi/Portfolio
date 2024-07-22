@@ -16,28 +16,11 @@ function Model({ path }) {
 
 function App() {
   return (
-    // Show multiple canvases.
     <div>
       <CollapsibleMenu />
-      <ProfileComponent/>
+      <ProfileComponent />
       <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
-        {/*<div style={{ flex: 1 }}>
-          <Canvas camera={{ position: [0, 0, 2] }}>
-            <ambientLight intensity={0.5} />
-            <directionalLight position={[2, 2, 2]} />
-            <OrbitControls />
-            <Model path="/model.glb" />
-          </Canvas>
-        </div>
-        <div style={{ flex: 1 }}>
-          <Canvas camera={{ position: [0, 0, 2] }}>
-            <ambientLight intensity={0.5} />
-            <directionalLight position={[2, 2, 2]} />
-            <OrbitControls />
-            <Model path="/model.glb" />
-          </Canvas>
-        </div>*/}
-        <Blog/>
+        <Blog />
       </div>
     </div>
   );

@@ -1,0 +1,57 @@
+[
+    {
+      "title": "Virtual Safety Training with VR for SNCF",
+      "date": "21 Mar 2024",
+      "content": "We developed a VR training program using HTC VIVE for SNCF. The training allows the student to learn the safety procedures required during an accident on the track. The VR setup includes haptic feedback through the tools used in the training, providing a realistic training environment for the participants. This innovative approach ensures that safety protocols are thoroughly understood and practiced.",
+      "tags": ["sncf", "virtual reality", "unity"]
+    },
+    {
+      "title": "WINmed Medical Training Application",
+      "date": "30 Aug 2023",
+      "content": "WINmed is a comprehensive training solution for medical students to manage patient consultations. The initial prototype was developed in 2020, and we resumed work in 2023 to enhance communication between Unity's C# code and the SQL backend. The application provides realistic training scenarios to help medical students gain practical experience in patient management, enhancing their learning and preparation for real-world medical practice.",
+      "tags": ["unity3d", "medical", "health", "training", "csharp", "santé", "formation"]
+    },
+    {
+      "title": "Application de scan INEDIT",
+      "date": "29 Aug 2023",
+      "content": "Using the depth sensor and camera of the iPad Pro 2020, we developed a scanning application for INEDIT. The application allows users to scan a room, which can then be used as a backdrop for designing custom furniture. The main scanning module, developed in C#, includes threaded access to sensor images, an unwrapping algorithm, HLSL shader for texture baking, and algorithms for exporting to .obj and .png formats. This project showcases advanced scanning and image processing techniques.",
+      "tags": ["unity3d", "scan", "youtube", "csharp"]
+    },
+    {
+      "title": "Mini First Person Controller",
+      "date": "01 Aug 2023",
+      "content": "Mini First Person Controller is a versatile Unity Asset designed to offer a lightweight and user-friendly solution for implementing first-person movement in games or simulations. With customizable settings and easy integration, this asset empowers developers to quickly create immersive first-person experiences with minimal effort. The controller supports various features like split responsibilities, smooth movement, and integration with other Unity systems.",
+      "tags": ["csharp", "unity3d", "youtube"]
+    },
+    {
+      "title": "ToDo Mini",
+      "date": "01 Aug 2023",
+      "content": "ToDo Mini is a small productivity tool designed for Unity developers to streamline project management within the Unity Editor. It allows developers to create, organize, and prioritize tasks directly within their development environment. The tool is developed using C# and supports JSON for storing task data. It aims to enhance the workflow by integrating task management seamlessly with the development process.",
+      "tags": ["csharp", "unity3d", "todo"]
+    },
+    {
+      "title": "Rigged Stethoscope",
+      "date": "31 Jul 2023",
+      "content": "This project involves a rigged stethoscope model for medical applications. The stethoscope features detailed tube control and physics, making it suitable for simulations in Unity and Unreal Engine. The model includes detachable earbuds and is optimized for realistic interaction. This asset is useful for creating medical training applications and simulations, providing high-quality 3D models with precise control mechanisms.",
+      "tags": ["csharp", "unity3d", "medical"]
+    },
+    {
+      "title": "La Plume et la Lanterne",
+      "date": "30 Jul 2023",
+      "content": "La Plume et la Lanterne is an award-winning Unity project that blends storytelling, interactivity, and innovative design. The game won the first place at the Laval Virtual 2019 contest #ReVolution and second place at the Japan IVRC. Players navigate enchanting landscapes, solve intricate puzzles, and unlock the secrets of a hidden realm in this VR multiplayer game. The project involved developing puzzle logic, crankshaft controls, mesh cutting, and in-app camera feedback, all using C# and Arduino logic.",
+      "tags": ["csharp", "unity3d", "ivrc", "laval virtual"]
+    },
+    {
+      "title": "VR scan editing application",
+      "date": "30 Jul 2023",
+      "content": "This VR application allows users to edit scans to optimize an operator's movements in a room. The VR user can cut out sections of the room to rearrange it and take notes in 3D space. Developed in collaboration with Présence & Innovation Chaire de recherche, the application includes a cutting algorithm and a pathfinding algorithm, all implemented in C#. The goal is to enhance productivity and spatial arrangement through immersive VR technology.",
+      "tags": ["csharp", "unity", "3d scanning services"]
+    },
+    {
+      "title": "School Videogame Project",
+      "date": "30 Jul 2023",
+      "content": "This school project involved developing a videogame as part of a team of three, where I was the C# developer. The project included implementing pebble physics and world generation, providing a learning experience in game development and teamwork. The game showcases basic physics simulations and procedural world generation techniques, contributing to my growth as a developer.",
+      "tags": ["csharp", "unity3d", "youtube"]
+    }
+  ]
+  
