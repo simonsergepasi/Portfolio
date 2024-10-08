@@ -1,35 +1,49 @@
-import React, { useEffect, useState, useMemo } from 'react';
-import { Canvas } from '@react-three/fiber';
+import React, { useEffect, useState, useMemo, useRef } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import { clone } from 'three/examples/jsm/utils/SkeletonUtils';
 import './Blog.css'
 
-function Model({ path }) {
+function Model({ path, isControlled }) {
   const { scene } = useGLTF(path);
   const clonedScene = useMemo(() => clone(scene), [scene]);
-  return <primitive object={clonedScene} />;
+  const modelRef = useRef();
+
+  // Time-based rotation
+  useFrame((_, delta) => {
+    if (!isControlled && modelRef.current) {
+      modelRef.current.rotation.y += delta * 0.5; // Adjust speed as needed
+    }
+  });
+
+  return <primitive ref={modelRef} object={clonedScene} />;
 }
 
-const BlogEntry = ({ title, date, content, tags, model }) => (
-  <div className="blog-entry">
-    <div className="text-content">
-      <h2>{title}</h2>
-      <p><em>{date}</em></p>
-      <div>{content}</div>
-      <p><strong>Tags:</strong> {tags.join(', ')}</p>
+const BlogEntry = ({ title, date, content, tags, model }) => {
+  const [isControlled, setIsControlled] = useState(false);
+
+  return (
+    <div className="blog-entry">
+      <div className="text-content">
+        <h2>{title}</h2>
+        <p><em>{date}</em></p>
+        <div>{content}</div>
+        <p><strong>Tags:</strong> {tags.join(', ')}</p>
+      </div>
+      <div className="canvas-container" style={{ height: '100%', width: '300px' }}>
+        <Canvas camera={{ position: [0, 0, 2] }}>
+          <ambientLight intensity={0.5} />
+          <directionalLight position={[2, 2, 2]} />
+          <OrbitControls
+            onStart={() => setIsControlled(true)}
+            onEnd={() => setIsControlled(false)}
+          />
+          <Model path={model} isControlled={isControlled} />
+        </Canvas>
+      </div>
     </div>
-    <div className="canvas-container"
-      style={{ height: '100%', width: '300px' }}
-    >
-      <Canvas camera={{ position: [0, 0, 2] }}        >
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[2, 2, 2]} />
-        <OrbitControls />
-        <Model path={model} />
-      </Canvas>
-    </div>
-  </div>
-);
+  );
+};
 
 const Blog = () => {
   const [blogEntries, setBlogEntries] = useState([]);
