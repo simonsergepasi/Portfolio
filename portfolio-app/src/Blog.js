@@ -10,7 +10,7 @@ function Model({ path }) {
   return <primitive object={clonedScene} />;
 }
 
-const BlogEntry = ({ title, date, content, tags }) => (
+const BlogEntry = ({ title, date, content, tags, model }) => (
   <div className="blog-entry">
     <div className="text-content">
       <h2>{title}</h2>
@@ -25,7 +25,7 @@ const BlogEntry = ({ title, date, content, tags }) => (
         <ambientLight intensity={0.5} />
         <directionalLight position={[2, 2, 2]} />
         <OrbitControls />
-        <Model path="/model.glb" />
+        <Model path={model} />
       </Canvas>
     </div>
   </div>
@@ -49,6 +49,7 @@ const Blog = () => {
           date={entry.date}
           content={entry.content}
           tags={entry.tags}
+          model={entry.model}
         />
       ))}
     </div>
